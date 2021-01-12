@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Comments from "./components/Comments/Comments";
+import UserComments from "./components/UserComments/UserComments";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Comments />
+        <UserComments />
       </main>
     </div>
   );

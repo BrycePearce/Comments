@@ -1,7 +1,8 @@
 export interface Comment {
-  parent: Comment;
+  parent?: Comment;
   children?: Comment[];
-  user: string;
+  author: string;
   body: string;
-  created: Date;
+  score: number;
+  created: string | Date;
 }
