@@ -47,6 +47,25 @@ const CommentText = styled.p`
   word-break: break-word;
   color: ${TEXT.lightGray};
 `;
+const Footer = styled.footer`
+  display: flex;
+  color: ${TEXT.darkGray};
+
+  & > * :not(:last-child) {
+    margin-right: 0.5rem;
+  }
+`;
+const FooterBtn = styled.button`
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0.1rem 0;
+  color: inherit;
+  & :hover {
+    background-color: #ebe4e4;
+    opacity: 40%;
+  }
+`;
 const ChildrenWrapper = styled.div`
   margin-left: 2rem;
   margin-top: 0.5rem;
@@ -67,6 +86,13 @@ const UserComment = ({ comment }: UserCommentProps) => {
             <Timestamp>{comment.created}</Timestamp>
           </Header>
           <CommentText>{comment.body}</CommentText>
+          <Footer>
+            <FooterBtn>Reply</FooterBtn>
+            <FooterBtn>Give Award</FooterBtn>
+            <FooterBtn>Share</FooterBtn>
+            <FooterBtn>Report</FooterBtn>
+            <FooterBtn>Save</FooterBtn>
+          </Footer>
         </CommentBody>
       </CommentWrapper>
       <ChildrenWrapper>

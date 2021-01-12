@@ -4,6 +4,7 @@ const VoteWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-self: flex-start;
 `;
 const VoteBtn = styled.button`
   background-color: transparent;
